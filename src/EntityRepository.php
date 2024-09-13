@@ -196,7 +196,7 @@ class EntityRepository implements ObjectRepository, Selectable
      *
      * @psalm-return AbstractLazyCollection<int, T>&Selectable<int, T>
      */
-    public function matching(Criteria $criteria): AbstractLazyCollection&Selectable
+    public function matching(Criteria $criteria): AbstractLazyCollection
     {
         $persister = $this->em->getUnitOfWork()->getEntityPersister($this->entityName);
 
